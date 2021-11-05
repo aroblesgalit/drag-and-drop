@@ -13,6 +13,7 @@ draggables.forEach(draggable => {
 
 containers.forEach(container => {
   container.addEventListener('dragover', () => {
-    console.log('drag over')
+    const draggable = document.querySelector('.dragging')
+    container.appendChild(draggable)
   })
 })
