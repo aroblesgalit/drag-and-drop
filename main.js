@@ -12,7 +12,8 @@ draggables.forEach(draggable => {
 })
 
 containers.forEach(container => {
-  container.addEventListener('dragover', () => {
+  container.addEventListener('dragover', e => {
+    e.preventDefault() // Enables dropping because by default, dropping inside of an element is disabled
     const draggable = document.querySelector('.dragging')
     container.appendChild(draggable)
   })
