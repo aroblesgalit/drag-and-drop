@@ -60,3 +60,13 @@ body {
 .droppable.dropped div {
   pointer-events: none;
 }
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
