@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+#draggables {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.draggable {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
