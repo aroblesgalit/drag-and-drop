@@ -10,6 +10,35 @@ const imagePortions = [
 const draggablesContainer = document.querySelector('#draggables')
 imagePortions.forEach((image, index) => {
   const el = `<div id=${index +
-    1} class='draggable' style='background: ${image}'></div>`
+    1} class='draggable' style='background: ${image}' draggable='true'></div>`
   draggablesContainer.insertAdjacentHTML('beforeend', el)
+})
+
+const draggableElements = document.querySelectorAll('.draggable')
+const droppableElements = document.querySelectorAll('.droppable')
+
+draggableElements.forEach(elem => {
+  elem.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text', e.target.id)
+  })
+})
+
+droppableElements.forEach(elem => {
+  elem.addEventListener('dragenter', e => {
+    e.target.classList.add('droppable-hover')
+  })
+
+  elem.addEventListener('dragover', e => {
+    e.preventDefault()
+  })
+
+  elem.addEventListener('dragleave', e => {
+    e.target.classList.remove('droppable-hover')
+  })
+
+  elem.addEventListener('drop', e => {
+    e.preventDefault()
+    const draggableElementId = e.dataTransfer.getData('text')
+    console.log(draggableElementId)
+  })
 })
