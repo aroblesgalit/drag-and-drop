@@ -39,6 +39,18 @@ droppableElements.forEach(elem => {
   elem.addEventListener('drop', e => {
     e.preventDefault()
     const draggableElementId = e.dataTransfer.getData('text')
-    console.log(draggableElementId)
+    const droppableElementId = e.target.getAttribute('data-draggable-id')
+    if (draggableElementId === droppableElementId) {
+      e.target.classList.add('dropped')
+      const draggableElement = document.getElementById(draggableElementId)
+      draggableElement.classList.add('dragged')
+      draggableElement.setAttribute('draggable', false)
+      e.target.insertAdjacentHTML(
+        'afterbegin',
+        `<div class='dragged-draggable' style='background: ${
+          imagePortions[draggableElementId - 1]
+        }'></div>`
+      )
+    }
   })
 })
