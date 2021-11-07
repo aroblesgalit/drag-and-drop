@@ -8,10 +8,16 @@ body {
   width: 100%;
 }
 
-#draggables {
+/* #draggables {
   display: flex;
   flex-wrap: wrap;
   width: 400px;
+  margin: 0 auto;
+} */
+
+#draggables {
+  display: flex;
+  width: 900px;
   margin: 0 auto;
 }
 
@@ -21,4 +27,19 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
+  margin: 0 10px;
+}
+
+#droppables {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.droppable {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
 }

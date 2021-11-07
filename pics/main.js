@@ -8,7 +8,8 @@ const imagePortions = [
 ]
 
 const draggablesContainer = document.querySelector('#draggables')
-imagePortions.forEach(image => {
-  const el = `<div class='draggable' style='background: ${image}'></div>`
+imagePortions.forEach((image, index) => {
+  const el = `<div id=${index +
+    1} class='draggable' style='background: ${image}'></div>`
   draggablesContainer.insertAdjacentHTML('beforeend', el)
 })
