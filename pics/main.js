@@ -38,6 +38,7 @@ droppableElements.forEach(elem => {
 
   elem.addEventListener('drop', e => {
     e.preventDefault()
+    e.target.classList.remove('droppable-hover')
     const draggableElementId = e.dataTransfer.getData('text')
     const droppableElementId = e.target.getAttribute('data-draggable-id')
     if (draggableElementId === droppableElementId) {
