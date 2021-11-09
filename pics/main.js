@@ -23,7 +23,7 @@ function shuffleImages () {
     randIndex
   while (curIndex != 0) {
     // Pick a remaining element
-    randIndex = Math.floor(Math.random * curIndex)
+    randIndex = Math.floor(Math.random() * curIndex)
     curIndex--
     // And swap it with the current element
     ;[shuffleImages[curIndex], shuffleImages[randIndex]] = [
@@ -31,6 +31,9 @@ function shuffleImages () {
       shuffleImages[curIndex]
     ]
   }
+  shuffledImages.forEach(image => {
+    draggablesContainer.insertAdjacentHTML('beforeend', image)
+  })
 }
 shuffleImages()
 
