@@ -7,12 +7,32 @@ const imagePortions = [
   `url(${image}) 200px 200px`
 ]
 
+const shuffledImages = []
+
 const draggablesContainer = document.querySelector('#draggables')
-imagePortions.forEach((image, index) => {
-  const el = `<div id=${index +
-    1} class='draggable' style='background: ${image}' draggable='true'></div>`
-  draggablesContainer.insertAdjacentHTML('beforeend', el)
-})
+function shuffleImages () {
+  const divs = []
+  imagePortions.forEach((image, index) => {
+    const el = `<div id=${index +
+      1} class='draggable' style='background: ${image}' draggable='true'></div>`
+    divs.push(el)
+    // draggablesContainer.insertAdjacentHTML('beforeend', el)
+  })
+  // While there remain elements to shuffle
+  let curIndex = shuffleImages.length,
+    randIndex
+  while (curIndex != 0) {
+    // Pick a remaining element
+    randIndex = Math.floor(Math.random * curIndex)
+    curIndex--
+    // And swap it with the current element
+    ;[shuffleImages[curIndex], shuffleImages[randIndex]] = [
+      shuffleImages[randIndex],
+      shuffleImages[curIndex]
+    ]
+  }
+}
+shuffleImages()
 
 const draggableElements = document.querySelectorAll('.draggable')
 const droppableElements = document.querySelectorAll('.droppable')
