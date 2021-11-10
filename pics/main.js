@@ -1,10 +1,11 @@
-const image = 'https://gradle.org/images/gradle-400x400.png'
+const image =
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjmGMgKmDpvLrXnhk3SiwVwqjsjfxDxBM8EQ&usqp=CAU'
 
 const imagePortions = [
   `url(${image}) 0 0`,
-  `url(${image}) -200px 0`,
-  `url(${image}) 0 200px`,
-  `url(${image}) 200px 200px`
+  `url(${image}) -100px 0`,
+  `url(${image}) 0 100px`,
+  `url(${image}) 100px 100px`
 ]
 
 const shuffledImages = []

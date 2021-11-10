@@ -17,13 +17,13 @@ body {
 
 #draggables {
   display: flex;
-  width: 900px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 20px auto;
 }
 
 .draggable {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
@@ -32,8 +32,8 @@ body {
 }
 
 .dragged-draggable {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 
 .draggable:hover {
@@ -43,14 +43,14 @@ body {
 #droppables {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
 }
 
 .droppable {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border: 1px dashed #ccc;
 }
 
