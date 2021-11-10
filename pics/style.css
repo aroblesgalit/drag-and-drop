@@ -6,14 +6,28 @@
 
 body {
   width: 100%;
+  padding: 40px;
+  background-color: #303030;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ccc;
 }
 
-/* #draggables {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-  margin: 0 auto;
-} */
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 10px;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: lighter;
+  text-align: center;
+}
 
 #draggables {
   display: flex;
